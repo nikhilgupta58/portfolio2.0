@@ -1,9 +1,10 @@
 import { Text } from "@chakra-ui/react"
+import { Dashboard } from "./pages/Dashboard"
 
 function App() {
 
   return (
-    <Text fontFamily={'Raleway'} fontSize='32px'>Hi</Text>    
+    <Dashboard />
   )
 }
 
