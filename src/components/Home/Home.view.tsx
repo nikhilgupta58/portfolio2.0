@@ -35,8 +35,13 @@ export default function HomeView() {
                     justifyContent={'center'}
                     alignItems='center'
                     columnGap={'15px'}
+                    _hover={{
+                        bgColor: '#04c2c9',
+                        borderColor:'#04c2c9',
+                        transition: '0.2s ease-in'
+                    }}
                 >
-                    <Text>View my work</Text>
+                    <a href="#about">View my work</a>
                     <Flex
                         as={motion.div}
                         variants={rotate}
