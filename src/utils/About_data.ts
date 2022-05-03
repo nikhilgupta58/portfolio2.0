@@ -25,3 +25,60 @@ export const characterstics = [
         img: SiDynamics365
     },
 ]
+
+export const skills = [
+    {
+        title: 'React',
+        progress: 60
+    },
+    {
+        title: 'Nextjs',
+        progress: 50
+    },
+    {
+        title: 'gatsby',
+        progress: 40
+    },
+    {
+        title: 'Css',
+        progress: 70
+    },
+    {
+        title: 'html',
+        progress: 80
+    },
+
+    {
+        title: 'TypeScript',
+        progress: 50
+    },
+
+    {
+        title: 'Javascript',
+        progress: 60
+    },
+
+    {
+        title: 'git',
+        progress: 70
+    },
+
+    {
+        title: 'graphql',
+        progress: 30
+    },
+
+
+    {
+        title: 'Apolloclient3',
+        progress: 40
+    }
+]
+
+export const aboutme = {
+    company: 'Tartan',
+    country: 'India',
+    city: 'Dehradun',
+    companyWebsite:'https://www.tartanhq.com/',
+    desc:'I have serious passion for UI effects, creating intuitive and dynamic user experiences.'
+}

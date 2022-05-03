@@ -21,7 +21,7 @@ export default function NavigationBarContainer() {
         },
         {
             title: 'PORTFOLIO',
-            active: false,
+            active: yPos <= winH * 3 && yPos > winH*2,
             href: '#portfolio'
         },
         {
