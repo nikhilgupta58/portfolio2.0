@@ -17,6 +17,7 @@ export default function NavigationBarView() {
                 justifyContent='center'
                 fontSize={{ base: '8pt', sm: '10pt', md: '11pt', lg: '12pt' }}
                 lineHeight={{ base: '12pt', sm: '14pt', md: '16pt', lg: '18pt' }}
+                zIndex={99}
             >
                 <Flex w={{ base: '90vw', md: '80vw', lg: '70vw' }} display={{ base: 'none', sm: 'inherit' }}>
                     {items.map((item, id) => (

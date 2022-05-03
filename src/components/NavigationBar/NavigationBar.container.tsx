@@ -21,17 +21,17 @@ export default function NavigationBarContainer() {
         },
         {
             title: 'PORTFOLIO',
-            active: yPos <= winH * 3 && yPos > winH*2,
+            active: yPos <= winH * 3 && yPos > winH * 2,
             href: '#portfolio'
         },
         {
             title: 'BLOG',
-            active: false,
+            active: yPos <= winH * 4 && yPos > winH * 3,
             href: '#blog'
         },
         {
             title: 'CONTACT',
-            active: false,
+            active: yPos <= winH * 5 && yPos > winH * 4,
             href: '#contact'
         },
     ]
