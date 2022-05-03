@@ -47,7 +47,7 @@ export default function PortfolioView() {
                 <Grid
                     m={{ base: '40px 0 30px 0', sm: '60px 0 35px 0', md: '80px 0 50px 0', lg: '100px 0 70px 0' }}
                     w='100%'
-                    templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)'}}
+                    templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }}
                 >
                     {projects.map((project, id) => (
                         <GridItem
@@ -116,7 +116,11 @@ export default function PortfolioView() {
                                                 transition: '0.2s ease-in',
                                                 color: 'white'
                                             }}
-                                            onClick={(e) => { e.preventDefault() }}
+
+                                            onClick={(e) => {
+                                                e.stopPropagation()
+                                                window.open(project.link)
+                                            }}
                                         >
                                             LEARN MORE
                                         </Flex>
