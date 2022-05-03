@@ -52,8 +52,8 @@ export default function NavigationBarView() {
                     variants={variants}
                 >
                     {items.map((item, id) => (
-                        <Flex key={id} color={item.active ? '#e31b6d' : 'white'} m='10px 20px' cursor={'pointer'} >
-                             <a href={item.href}>{item.title}</a>
+                        <Flex key={id} color={item.active ? '#e31b6d' : 'white'} m='10px 20px' cursor={'pointer'} onClick={() => setShow(false)}>
+                            <a href={item.href}>{item.title}</a>
                         </Flex>
                     ))}
                 </Flex>
