@@ -26,6 +26,7 @@ export default function PortfolioView() {
             p={{ base: '40px 0 40px 0', sm: '50px 0 50px 0', md: '70px 0 70px 0', lg: '100px 0 130px 0' }}
             color={'#616161'}
             bgColor='#f5f5f5'
+            overflowX={'hidden'}
             fontSize={{ base: '9pt', sm: '11pt', md: '12pt' }}
         >
             <Flex
