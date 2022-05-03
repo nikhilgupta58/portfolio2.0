@@ -4,7 +4,7 @@ import React from "react";
 import { useContactContext } from "./utils/context";
 
 export default function ContactView() {
-    const { onSubmit, name, setName, email, setEmail, message, setMessage } = useContactContext()
+    const { onSubmit, form } = useContactContext()
     return (
         <Flex
             id='contact'
@@ -32,65 +32,57 @@ export default function ContactView() {
                 <Flex mt={'40px'} color='#04c2c9' fontWeight={'600'}>
                     Have a question or want to work together?
                 </Flex>
-                <Flex
-                    direction={'column'}
-                    mt={'60px'}
-                    mb='100px'
-                    w={{ base: '300px', sm: '450px', md: '500px' }}
-                    gap={1}
-                >
-                    <Input
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        bgColor={'#1e242c'}
-                        p='10px 15px'
-                        placeholder='Name'
-                        border={'none'}
-                        borderRadius='0'
-                        _placeholder={{ color: '#686868' }}
-                    />
-                    <Input
-                        value={email}
-                        type='email'
-                        onChange={(e) => setEmail(e.target.value)}
-                        bgColor={'#1e242c'}
-                        p='10px 15px'
-                        placeholder='Enter Email'
-                        border={'none'}
-                        borderRadius='0'
-                        _placeholder={{ color: '#686868' }}
-                    />
-                    <Textarea
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                        bgColor={'#1e242c'}
-                        p='10px 15px'
-                        placeholder='Your Message'
-                        border={'none'}
-                        borderRadius='0'
-                        _placeholder={{ color: '#686868' }}
-                    />
-                    <Button
-                        bgColor={'transparent'}
-                        p='8px 15px'
-                        alignSelf={'end'}
-                        borderRadius='0'
-                        w='110px'
-                        _hover={{
-                            bgColor: '#04c2c9',
-                            borderColor: '#04c2c9',
-                            transition: '0.2s ease-in'
-                        }}
-                        _focus={{ bgColor: 'none' }}
-                        _active={{ bgColor: 'none' }}
-                        border={'2px solid white'}
-                        justifyContent='center'
-                        onClick={(e) => onSubmit()}
-                        disabled={!(name && message && email)}
+                <form ref={form} onSubmit={onSubmit}>
+                    <Flex
+                        direction={'column'}
+                        mt={'60px'}
+                        mb='100px'
+                        w={{ base: '300px', sm: '450px', md: '500px' }}
+                        gap={1}
                     >
-                        SUBMIT
-                    </Button>
-                </Flex>
+                        <Input
+                            name="user_name"
+                            bgColor={'#1e242c'}
+                            p='10px 15px'
+                            placeholder='Name'
+                            border={'none'}
+                            borderRadius='0'
+                            _placeholder={{ color: '#686868' }}
+                        />
+                        <Input
+                            type='email'
+                            name="user_email"
+                            bgColor={'#1e242c'}
+                            p='10px 15px'
+                            placeholder='Enter Email'
+                            border={'none'}
+                            borderRadius='0'
+                            _placeholder={{ color: '#686868' }}
+                        />
+                        <Textarea
+                            name="message"
+                            bgColor={'#1e242c'}
+                            p='10px 15px'
+                            placeholder='Your Message'
+                            border={'none'}
+                            borderRadius='0'
+                            _placeholder={{ color: '#686868' }}
+                        />
+                        <Input bgColor={'transparent'}
+                            p='8px 15px'
+                            alignSelf={'end'}
+                            borderRadius='0'
+                            w='110px'
+                            _hover={{
+                                bgColor: '#04c2c9',
+                                borderColor: '#04c2c9',
+                                transition: '0.2s ease-in'
+                            }}
+                            border={'2px solid white'}
+                            justifyContent='center' type={'submit'} value='SUBMIT' cursor={'pointer'}
+                        />
+                    </Flex>
+                </form>
             </Flex>
         </Flex>
     )

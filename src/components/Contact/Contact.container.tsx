@@ -1,20 +1,24 @@
 
-import React from "react";
+import React, { useRef } from "react";
 import ContactView from "./Contact.view";
 import { ContactContext } from "./utils/context";
+import emailjs from '@emailjs/browser';
 
 export default function ContactContainer() {
-    const [name, setName] = React.useState("");
-    const [email, setEmail] = React.useState("");
-    const [message, setMessage] = React.useState("");
-
-    const onSubmit = () => {
-
+    const form = useRef();
+    const onSubmit = (e) => {
+        e.preventDefault();
+        emailjs.sendForm('service_gdz1xfz', 'template_m28xm8s', form.current, '2VLI5QFe2mbZEvfeD')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
     }
     return (
         <ContactContext.Provider
             value={{
-                onSubmit, name, setName, email, setEmail, message, setMessage
+                onSubmit,form
             }}
         >
             <ContactView />

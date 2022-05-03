@@ -26,6 +26,7 @@ export default function FooterView() {
                 <Flex>
                     {footers.map((footer, id) => (
                         <Flex
+                            key={id}
                             w='50pt'
                             h={'55px'}
                             fontSize='18pt'
