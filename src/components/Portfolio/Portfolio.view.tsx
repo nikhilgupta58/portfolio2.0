@@ -107,7 +107,7 @@ export default function PortfolioView() {
                                             justifyContent={'center'}
                                             border={'2px solid #e31b6d'}
                                             p='7px'
-                                            mt={5}
+                                            mt={'50px'}
                                             cursor='pointer'
                                             w='170px'
                                             _hover={{
