@@ -1,5 +1,11 @@
 export const projects = [
     {
+        title:'FitWithWe',
+        language: 'ReactJs',
+        image: './website.png',
+        link:"https://fitwithwe.vercel.app/"
+    },
+    {
         title:'Twitter Clone',
         language: 'NextJs/GraphqQL',
         image: './twitter.png',
